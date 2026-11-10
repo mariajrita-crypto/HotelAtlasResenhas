@@ -1,0 +1,166 @@
+/* HOTEL ATLAS — tema noturno suave: grafite azulado, ardósia e champanhe.
+   Evita superfícies brancas e contrastes excessivamente fortes. */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #263342;
+    -fx-background: #151d27;
+    -fx-background-color: #151d27;
+    -fx-control-inner-background: #202b38;
+    -fx-control-inner-background-alt: #243140;
+    -fx-accent: #c5a46d;
+    -fx-focus-color: #c5a46d;
+    -fx-faint-focus-color: rgba(197,164,109,0.16);
+    -fx-text-base-color: #e5e9ef;
+    -fx-text-background-color: #e5e9ef;
+    -fx-selection-bar: #46566a;
+    -fx-selection-bar-non-focused: #344456;
+}
+
+.label { -fx-text-fill: #dce3eb; }
+.separator *.line { -fx-border-color: #354252; -fx-border-width: 1 0 0 0; }
+
+/* Estrutura */
+.sidebar { -fx-background-color: #111923; -fx-border-color: #273342; -fx-border-width: 0 1 0 0; }
+.sidebar .button {
+    -fx-background-color: transparent; -fx-text-fill: #aeb9c7;
+    -fx-font-size: 13px; -fx-alignment: CENTER-LEFT; -fx-padding: 12 16;
+    -fx-background-radius: 8; -fx-cursor: hand;
+}
+.sidebar .button:hover { -fx-background-color: #253242; -fx-text-fill: #e8d5b2; }
+.topbar { -fx-background-color: #111923; -fx-padding: 15 28; -fx-border-color: #2b3745; -fx-border-width: 0 0 1 0; }
+.page-scroll, .page-scroll > .viewport { -fx-background: #151d27; -fx-background-color: #151d27; }
+.scroll-pane { -fx-background-color: #151d27; -fx-background: #151d27; }
+.scroll-pane > .viewport { -fx-background-color: #151d27; }
+.scroll-bar:vertical, .scroll-bar:horizontal { -fx-background-color: #151d27; }
+.scroll-bar .track { -fx-background-color: #1c2733; -fx-background-radius: 6; }
+.scroll-bar .thumb { -fx-background-color: #455466; -fx-background-radius: 6; }
+.scroll-bar .thumb:hover { -fx-background-color: #607187; }
+
+/* Tipografia */
+.brand-title { -fx-font-size: 29px; -fx-font-weight: 800; -fx-text-fill: #ead9bb; }
+.brand-small { -fx-font-size: 19px; -fx-font-weight: 800; -fx-text-fill: #ead9bb; }
+.subtitle { -fx-font-size: 13px; -fx-text-fill: #9eacbc; }
+.section-title { -fx-font-size: 16px; -fx-font-weight: 700; -fx-text-fill: #e8edf3; }
+.page-title { -fx-font-size: 25px; -fx-font-weight: 750; -fx-text-fill: #f0e7d8; }
+.topbar-caption { -fx-font-size: 9px; -fx-text-fill: #8d9aaa; -fx-letter-spacing: 1.2px; }
+.welcome-label { -fx-text-fill: #dce3eb; -fx-font-size: 13px; }
+.error-text { -fx-text-fill: #f19a91; -fx-font-size: 12px; }
+.info-text { -fx-text-fill: #a9bacb; -fx-font-size: 13px; }
+.hint-text { -fx-text-fill: #8998a9; -fx-font-size: 11px; }
+
+/* Cards e painéis */
+.login-card, .card-stat, .filter-card, .selection-card, .room-card, .booking-card, .demo-box {
+    -fx-background-color: #202b38;
+    -fx-background-radius: 13;
+    -fx-border-color: #344253;
+    -fx-border-radius: 13;
+}
+.login-card { -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.28), 24, 0, 0, 8); -fx-padding: 34; }
+.card-stat { -fx-padding: 17; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.13), 9, 0, 0, 3); }
+.card-stat-title { -fx-font-size: 12px; -fx-text-fill: #9eacbc; }
+.card-stat-value { -fx-font-size: 25px; -fx-font-weight: 800; -fx-text-fill: #ead9bb; }
+.filter-card, .selection-card { -fx-padding: 18; }
+.room-card { -fx-padding: 17; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 8, 0, 0, 2); }
+.room-card:hover { -fx-border-color: #8c795b; }
+.booking-card { -fx-padding: 16 18; }
+.demo-box { -fx-background-color: #263342; -fx-padding: 12; }
+.demo-title { -fx-font-weight: bold; -fx-text-fill: #cbb58f; -fx-font-size: 10px; }
+.empty-state { -fx-background-color: #263342; -fx-background-radius: 10; -fx-padding: 22; -fx-text-fill: #aebbc9; -fx-font-size: 13px; }
+
+/* Botões */
+.button { -fx-background-color: #344355; -fx-text-fill: #e3e9ef; -fx-background-radius: 8; -fx-padding: 9 15; -fx-cursor: hand; -fx-font-weight: 600; }
+.button:hover { -fx-background-color: #42566c; }
+.button:pressed { -fx-background-color: #2b3948; }
+.button:disabled { -fx-opacity: 0.48; -fx-cursor: default; }
+.btn-primary { -fx-background-color: #a98755; -fx-text-fill: #171d25; -fx-font-weight: 800; -fx-background-radius: 8; -fx-padding: 10 18; }
+.btn-primary:hover { -fx-background-color: #c09d68; }
+.btn-topbar { -fx-background-color: #2b3948; -fx-text-fill: #dce3eb; -fx-background-radius: 8; -fx-padding: 8 14; }
+.btn-topbar:hover { -fx-background-color: #3b4c60; }
+.btn-danger { -fx-background-color: #4a3034; -fx-text-fill: #f0b9b5; -fx-border-color: #70464a; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 13; }
+.btn-danger:hover { -fx-background-color: #604044; }
+
+/* Campos */
+.text-field, .password-field, .text-area, .combo-box, .date-picker, .spinner {
+    -fx-background-color: #1a2430; -fx-control-inner-background: #1a2430;
+    -fx-text-fill: #e5e9ef; -fx-prompt-text-fill: #77879a;
+    -fx-border-color: #3a4a5c; -fx-border-radius: 7; -fx-background-radius: 7;
+}
+.text-field, .password-field, .combo-box, .date-picker, .spinner { -fx-padding: 7 9; }
+.text-field:focused, .password-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused, .spinner:focused { -fx-border-color: #b99a69; }
+.text-area .content { -fx-background-color: #1a2430; -fx-background-radius: 7; }
+.text-area { -fx-background-radius: 7; }
+.combo-box .list-cell { -fx-text-fill: #e5e9ef; -fx-background-color: transparent; }
+.combo-box-popup .list-view, .context-menu { -fx-background-color: #202b38; -fx-border-color: #3a4a5c; }
+.combo-box-popup .list-cell { -fx-text-fill: #e5e9ef; -fx-background-color: #202b38; -fx-padding: 8 10; }
+.combo-box-popup .list-cell:hover, .combo-box-popup .list-cell:filled:selected { -fx-background-color: #3a4b5e; }
+.date-picker .arrow-button, .combo-box .arrow-button, .spinner .increment-arrow-button, .spinner .decrement-arrow-button { -fx-background-color: #2b3948; }
+.date-picker-popup { -fx-background-color: #202b38; -fx-border-color: #455568; }
+.date-picker-popup > .month-year-pane { -fx-background-color: #293747; }
+.date-picker-popup > .month-year-pane .label { -fx-text-fill: #e5e9ef; }
+.date-picker-popup .day-cell { -fx-background-color: #202b38; -fx-text-fill: #dce3eb; }
+.date-picker-popup .day-cell:hover { -fx-background-color: #3a4b5e; }
+.date-picker-popup .selected { -fx-background-color: #a98755; -fx-text-fill: #171d25; }
+.check-box { -fx-text-fill: #cbd5df; }
+.check-box .box { -fx-background-color: #1a2430; -fx-border-color: #526276; -fx-background-radius: 4; -fx-border-radius: 4; }
+.check-box:selected .mark { -fx-background-color: #171d25; }
+.check-box:selected .box { -fx-background-color: #b99a69; -fx-border-color: #b99a69; }
+
+/* Abas */
+.customer-tabs { -fx-background-color: transparent; }
+.customer-tabs > .tab-header-area > .tab-header-background { -fx-background-color: transparent; }
+.customer-tabs > .tab-header-area .tab { -fx-background-color: #202b38; -fx-background-radius: 8 8 0 0; -fx-padding: 9 17; }
+.customer-tabs > .tab-header-area .tab .tab-label { -fx-text-fill: #aeb9c7; -fx-font-weight: 600; }
+.customer-tabs > .tab-header-area .tab:selected { -fx-background-color: #2b3948; }
+.customer-tabs > .tab-header-area .tab:selected .tab-label { -fx-text-fill: #ead9bb; }
+.customer-tabs > .tab-content-area { -fx-background-color: #202b38; -fx-background-radius: 0 9 9 9; -fx-border-color: #344253; -fx-border-radius: 0 9 9 9; -fx-padding: 4; }
+
+/* Quartos e reservas */
+.room-title { -fx-font-size: 16px; -fx-font-weight: 750; -fx-text-fill: #e8edf3; }
+.room-price { -fx-font-size: 15px; -fx-font-weight: 800; -fx-text-fill: #d7b987; }
+.room-category { -fx-background-color: #4a4032; -fx-text-fill: #e7cfaa; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 5 11; }
+.room-meta { -fx-text-fill: #9eacbc; -fx-font-size: 12px; }
+.room-description { -fx-text-fill: #bdc8d4; -fx-font-size: 13px; }
+.room-total { -fx-text-fill: #aab8c7; -fx-font-size: 12px; }
+.summary-text { -fx-text-fill: #cbd5df; -fx-font-size: 13px; -fx-line-spacing: 4px; }
+.summary-total-caption { -fx-text-fill: #98a7b7; -fx-font-size: 10px; -fx-font-weight: bold; }
+.summary-total { -fx-text-fill: #dfc397; -fx-font-size: 20px; -fx-font-weight: 800; }
+.booking-confirmed { -fx-background-color: #29443e; -fx-text-fill: #a8d5c2; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 5 11; }
+.booking-cancelled { -fx-background-color: #4b3337; -fx-text-fill: #e5b1b1; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 5 11; }
+
+/* Calendário e tabelas da equipe */
+.calendar-header { -fx-background-color: #344355; -fx-text-fill: #ead9bb; -fx-font-weight: bold; -fx-alignment: center; -fx-padding: 9; -fx-min-width: 85; }
+.calendar-room { -fx-font-weight: bold; -fx-text-fill: #dce3eb; -fx-padding: 8; }
+.status-disponivel { -fx-background-color: #315247; -fx-text-fill: #c0e0d1; -fx-alignment: center; -fx-padding: 8; }
+.status-reservado { -fx-background-color: #344d68; -fx-text-fill: #c5d7eb; -fx-alignment: center; -fx-padding: 8; }
+.status-ocupado { -fx-background-color: #593b40; -fx-text-fill: #edc1c1; }
+.status-aguardando { -fx-background-color: #5b4c35; -fx-text-fill: #ead3a8; }
+.status-manutencao { -fx-background-color: #414b58; -fx-text-fill: #c5ced8; }
+.table-view { -fx-background-color: #202b38; -fx-control-inner-background: #202b38; -fx-table-cell-border-color: #344253; -fx-border-color: #344253; -fx-border-radius: 8; }
+.table-view .column-header-background { -fx-background-color: #2b3948; }
+.table-view .column-header, .table-view .filler { -fx-background-color: #2b3948; -fx-border-color: #3a4858; }
+.table-view .column-header .label { -fx-text-fill: #d9c49f; -fx-font-weight: bold; }
+.table-row-cell { -fx-background-color: #202b38; -fx-text-background-color: #dce3eb; }
+.table-row-cell:odd { -fx-background-color: #243140; }
+.table-row-cell:selected { -fx-background-color: #43556a; }
+.table-cell { -fx-text-fill: #dce3eb; -fx-border-color: transparent transparent #344253 transparent; }
+
+/* Alertas */
+.dialog-pane { -fx-background-color: #202b38; }
+.dialog-pane .header-panel { -fx-background-color: #293747; }
+.dialog-pane .header-panel .label { -fx-text-fill: #ead9bb; }
+.dialog-pane .content.label { -fx-text-fill: #dce3eb; }
+
+
+/* Abas de autenticação */
+.auth-tabs { -fx-background-color: transparent; -fx-border-color: transparent; }
+.auth-tabs > .tab-header-area > .tab-header-background { -fx-background-color: transparent; }
+.auth-tabs .tab { -fx-background-color: #202B38; -fx-background-radius: 8 8 0 0; -fx-padding: 8 18 8 18; }
+.auth-tabs .tab:selected { -fx-background-color: #344355; }
+.auth-tabs .tab-label { -fx-text-fill: #DCE3EB; -fx-font-weight: bold; }
+.auth-tabs > .tab-content-area { -fx-background-color: transparent; }
+.status-text { -fx-text-fill: #C9A978; -fx-font-size: 12px; }
+.helper-text { -fx-text-fill: #9EACBC; -fx-font-size: 11px; }
+.campo-invalido, .campo-invalido:focused { -fx-border-color: #e0746b; -fx-border-width: 1.5; }
+.room-photo { -fx-background-color: #263342; -fx-background-radius: 10; -fx-border-color: #3a4a5d; -fx-border-style: dashed; -fx-border-radius: 10; }
+.room-photo-text { -fx-text-fill: #9EACBC; -fx-font-size: 12px; -fx-text-alignment: center; }

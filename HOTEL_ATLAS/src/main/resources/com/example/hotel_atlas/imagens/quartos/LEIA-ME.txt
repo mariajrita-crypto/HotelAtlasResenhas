@@ -1,0 +1,18 @@
+FOTOS DOS QUARTOS - HOTEL ATLAS
+================================
+Coloque as imagens NESTA pasta, com o nome exato abaixo (aceita .jpg, .jpeg ou .png):
+
+  quarto-101.jpg   Standard
+  quarto-102.jpg   Standard
+  quarto-201.jpg   Superior
+  quarto-202.jpg   Superior
+  quarto-301.jpg   Familia
+  quarto-302.jpg   Familia
+  quarto-401.jpg   SUITE
+  quarto-402.jpg   SUITE
+
+Dicas:
+- Tamanho ideal: 520 x 360 px (proporcao 13:9) ou maior. Imagens de outro formato sao cortadas ao centro.
+- Depois de colocar os arquivos, rode o projeto de novo (Build/Rebuild) para o Maven copiar a imagem.
+- Quarto novo criado pelo funcionario: use o nome quarto-<numero>.jpg.
+- Enquanto nao houver arquivo, o card mostra um espaco reservado com o nome esperado.

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.ClienteController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" styleClass="topbar">
+            <VBox spacing="2">
+                <Label text="HOTEL ATLAS" styleClass="brand-small"/>
+                <Label text="HOSPEDAGEM E EXPERIÊNCIAS" styleClass="topbar-caption"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblBoasVindas" styleClass="welcome-label"/>
+            <Button text="Sair da conta" onAction="#sair" styleClass="btn-topbar"/>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="page-scroll">
+            <content>
+                <StackPane alignment="TOP_CENTER">
+                <VBox spacing="18" maxWidth="1280">
+                    <padding><Insets top="28" right="34" bottom="40" left="34"/></padding>
+                    <VBox spacing="5">
+                        <Label text="Sua próxima estadia começa aqui" styleClass="page-title"/>
+                        <Label text="Encontre o quarto ideal, faça sua reserva e acompanhe tudo em um só lugar." styleClass="subtitle"/>
+                    </VBox>
+                    <TabPane tabClosingPolicy="UNAVAILABLE" styleClass="customer-tabs">
+                        <tabs>
+                            <Tab text="Encontrar um quarto">
+                                <content>
+                                    <VBox spacing="16">
+                                        <padding><Insets top="18" right="8" bottom="18" left="8"/></padding>
+                                        <VBox spacing="12" styleClass="filter-card">
+                                            <Label text="1. Quando você quer se hospedar?" styleClass="section-title"/>
+                                            <FlowPane hgap="14" vgap="10" alignment="CENTER_LEFT">
+                                                <VBox spacing="5"><Label text="Check-in"/><DatePicker fx:id="dpEntrada" prefWidth="160"/></VBox>
+                                                <VBox spacing="5"><Label text="Check-out"/><DatePicker fx:id="dpSaida" prefWidth="160"/></VBox>
+                                                <VBox spacing="5"><Label text="Hóspedes"/><Spinner fx:id="spHospedes" prefWidth="105"/></VBox>
+                                                <VBox spacing="5"><Label text="Categoria"/><ComboBox fx:id="cbCategoria" prefWidth="170"/></VBox>
+                                                <VBox spacing="5"><Label text="Ordenar por"/><ComboBox fx:id="cbOrdenacao" prefWidth="170"/></VBox>
+                                                <Button text="Buscar quartos" onAction="#buscarQuartos" styleClass="btn-primary"/>
+                                            </FlowPane>
+                                            <Label text="Dica: o check-out deve ser pelo menos um dia depois do check-in." styleClass="hint-text"/>
+                                        </VBox>
+                                        <Label fx:id="lblMensagem" text="Escolha as datas para consultar os quartos." styleClass="info-text" wrapText="true"/>
+                                        <VBox fx:id="listaQuartos" spacing="12"/>
+                                        <VBox spacing="13" styleClass="selection-card">
+                                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                                <Label text="2. Revise e confirme sua reserva" styleClass="section-title"/>
+                                                <Region HBox.hgrow="ALWAYS"/>
+                                                <Label text="TOTAL" styleClass="summary-total-caption"/>
+                                                <Label fx:id="lblTotalTopo" text="—" styleClass="summary-total"/>
+                                            </HBox>
+                                            <Label fx:id="lblResumo" text="Selecione um quarto para visualizar o resumo completo." wrapText="true" styleClass="summary-text"/>
+                                            <Separator/>
+                                            <HBox spacing="14" alignment="TOP_LEFT">
+                                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                                    <Label text="Forma de pagamento"/>
+                                                    <ComboBox fx:id="cbPagamento" maxWidth="Infinity"/>
+                                                </VBox>
+                                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                                    <Label text="Observações (opcional)"/>
+                                                    <TextArea fx:id="txtObservacoes" promptText="Ex.: preferência por andar alto ou berço infantil" prefRowCount="2" wrapText="true"/>
+                                                </VBox>
+                                            </HBox>
+                                            <CheckBox fx:id="chkConcordo" text="Revisei as datas, a quantidade de hóspedes e o valor total da reserva." wrapText="true"/>
+                                            <Button fx:id="btnConfirmar" text="Confirmar reserva" onAction="#confirmarReserva" styleClass="btn-primary" maxWidth="260" disable="true"/>
+                                            <Label text="A reserva é demonstrativa: o pagamento não é processado pelo aplicativo. Combine a quitação diretamente com a recepção." styleClass="hint-text" wrapText="true"/>
+                                        </VBox>
+                                    </VBox>
+                                </content>
+                            </Tab>
+                            <Tab text="Minhas reservas" onSelectionChanged="#atualizarMinhasReservas">
+                                <content>
+                                    <VBox spacing="14">
+                                        <padding><Insets top="18" right="8" bottom="18" left="8"/></padding>
+                                        <HBox alignment="CENTER_LEFT" spacing="10">
+                                            <VBox spacing="4">
+                                                <Label text="Suas hospedagens" styleClass="section-title"/>
+                                                <Label text="Consulte os detalhes e cancele reservas futuras quando necessário." styleClass="subtitle"/>
+                                            </VBox>
+                                            <Region HBox.hgrow="ALWAYS"/>
+                                            <Label fx:id="lblContagemReservas" text="0 reservas" styleClass="room-meta"/>
+                                            <Button text="Atualizar" onAction="#atualizarMinhasReservas"/>
+                                        </HBox>
+                                        <VBox fx:id="listaReservas" spacing="12"/>
+                                    </VBox>
+                                </content>
+                            </Tab>
+                        </tabs>
+                    </TabPane>
+                </VBox>
+                </StackPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

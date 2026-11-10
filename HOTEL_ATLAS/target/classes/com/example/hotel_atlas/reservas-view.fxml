@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.HotelController">
+    <padding><Insets bottom="20" left="20" right="20" top="20"/></padding>
+    <Label text="Reservas realizadas" styleClass="page-title"/>
+    <Label text="Acompanhe os hóspedes, quartos, datas e valores das reservas." styleClass="subtitle"/>
+    <TableView fx:id="tabelaReservas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colReservaId" text="ID" prefWidth="55"/>
+            <TableColumn fx:id="colHospede" text="Hóspede" prefWidth="180"/>
+            <TableColumn fx:id="colQuarto" text="Quarto" prefWidth="150"/>
+            <TableColumn fx:id="colEntrada" text="Entrada" prefWidth="115"/>
+            <TableColumn fx:id="colSaida" text="Saída" prefWidth="115"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="110"/>
+            <TableColumn fx:id="colValor" text="Valor total" prefWidth="130"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.HotelController">
+    <padding><Insets bottom="20" left="20" right="20" top="20"/></padding>
+    <children>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Fluxo Financeiro e Caixa" />
+        <HBox spacing="15.0">
+            <children>
+                <VBox styleClass="card-stat" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label styleClass="card-stat-title" text="Receita Total" />
+                        <Label styleClass="card-stat-value" text="R$ 45.800,00" style="-fx-text-fill: #10b981;" />
+                    </children>
+                </VBox>
+                <VBox styleClass="card-stat" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label styleClass="card-stat-title" text="Despesas Totais" />
+                        <Label styleClass="card-stat-value" text="R$ 12.350,00" style="-fx-text-fill: #ef4444;" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <TableView fx:id="tabelaFinanceira" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="80.0" text="ID" />
+                <TableColumn prefWidth="250.0" text="Descrição" />
+                <TableColumn prefWidth="120.0" text="Valor (R$)" />
+                <TableColumn prefWidth="100.0" text="Tipo" />
+                <TableColumn prefWidth="140.0" text="Forma Pagto" />
+                <TableColumn prefWidth="160.0" text="Data/Hora" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

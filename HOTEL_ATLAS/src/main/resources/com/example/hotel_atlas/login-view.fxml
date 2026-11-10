@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.LoginController">
+    <center>
+        <VBox alignment="CENTER" spacing="14" maxWidth="470" styleClass="login-card">
+            <padding><Insets top="30" right="42" bottom="30" left="42"/></padding>
+            <Label text="HOTEL ATLAS" styleClass="brand-title"/>
+            <Label text="Sua estadia começa aqui" styleClass="subtitle"/>
+            <Separator/>
+            <TabPane tabClosingPolicy="UNAVAILABLE" prefWidth="390" styleClass="auth-tabs">
+                <tabs>
+                    <Tab text="Entrar">
+                        <content>
+                            <VBox spacing="13">
+                                <padding><Insets top="18" right="4" bottom="8" left="4"/></padding>
+                                <Label text="Acesse sua conta" styleClass="section-title"/>
+                                <VBox spacing="6"><Label text="Tipo de acesso"/><ComboBox fx:id="cbPerfil" maxWidth="Infinity"/></VBox>
+                                <VBox spacing="6"><Label text="CPF / e-mail do funcionário"/><TextField fx:id="txtIdentificador" promptText="Seu CPF (somente números)"/></VBox>
+                                <VBox spacing="6"><Label text="Senha"/><PasswordField fx:id="txtSenha" promptText="Digite sua senha" onAction="#entrar"/></VBox>
+                                <Label fx:id="lblErro" wrapText="true" styleClass="error-text"/>
+                                <Button text="Entrar" onAction="#entrar" maxWidth="Infinity" styleClass="btn-primary"/>
+                                <VBox styleClass="demo-box" spacing="4">
+                                    <Label text="ACESSO DE DEMONSTRAÇÃO — FUNCIONÁRIO" styleClass="demo-title"/>
+                                    <Label text="funcionario@atlas.com  |  Senha: 123456" wrapText="true"/>
+                                </VBox>
+                            </VBox>
+                        </content>
+                    </Tab>
+                    <Tab text="Criar conta">
+                        <content>
+                            <VBox spacing="12">
+                                <padding><Insets top="18" right="4" bottom="8" left="4"/></padding>
+                                <Label text="Cadastro de cliente" styleClass="section-title"/>
+                                <VBox spacing="5"><Label text="CPF"/><TextField fx:id="txtCpfCadastro" promptText="Somente os 11 números"/></VBox>
+                                <VBox spacing="5"><Label text="Telefone com DDD"/><TextField fx:id="txtTelefoneCadastro" promptText="Ex.: 48999998888"/></VBox>
+                                <VBox spacing="5"><Label text="Senha"/><PasswordField fx:id="txtSenhaCadastro" promptText="Mínimo de 8 caracteres"/></VBox>
+                                <VBox spacing="5"><Label text="Confirmar senha"/><PasswordField fx:id="txtConfirmarSenha" promptText="Digite a senha novamente" onAction="#cadastrar"/></VBox>
+                                <Label fx:id="lblCadastroStatus" wrapText="true" styleClass="status-text"/>
+                                <Button text="Criar minha conta" onAction="#cadastrar" maxWidth="Infinity" styleClass="btn-primary"/>
+                                <Label text="Cadastro local para demonstração. Use dados fictícios durante os testes." wrapText="true" styleClass="helper-text"/>
+                            </VBox>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </VBox>
+    </center>
+</BorderPane>

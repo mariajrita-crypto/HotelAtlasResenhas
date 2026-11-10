@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.HotelController">
+    <padding><Insets bottom="20" left="20" right="20" top="20"/></padding>
+    <children>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Cadastro de Hóspedes e Clientes" />
+        <HBox spacing="10.0">
+            <TextField promptText="Buscar Hóspede por Nome/CPF..." HBox.hgrow="ALWAYS" />
+            <Button styleClass="btn-primary" text="+ Novo Hóspede" />
+        </HBox>
+        <TableView fx:id="tabelaHospedes" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="60.0" text="ID" />
+                <TableColumn prefWidth="220.0" text="Nome Completo" />
+                <TableColumn prefWidth="130.0" text="CPF/Documento" />
+                <TableColumn prefWidth="130.0" text="Telefone" />
+                <TableColumn prefWidth="200.0" text="E-mail" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
