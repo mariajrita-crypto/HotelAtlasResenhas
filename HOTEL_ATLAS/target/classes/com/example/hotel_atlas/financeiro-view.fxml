@@ -6,19 +6,19 @@
 <VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.HotelController">
     <padding><Insets bottom="20" left="20" right="20" top="20"/></padding>
     <children>
-        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Fluxo Financeiro e Caixa" />
+        <Label styleClass="page-title" text="Fluxo Financeiro e Caixa" />
         <HBox spacing="15.0">
             <children>
                 <VBox styleClass="card-stat" HBox.hgrow="ALWAYS">
                     <children>
                         <Label styleClass="card-stat-title" text="Receita Total" />
-                        <Label styleClass="card-stat-value" text="R$ 45.800,00" style="-fx-text-fill: #10b981;" />
+                        <Label styleClass="card-stat-value" text="R$ 45.800,00" style="-fx-text-fill: #ffffff;" />
                     </children>
                 </VBox>
                 <VBox styleClass="card-stat" HBox.hgrow="ALWAYS">
                     <children>
                         <Label styleClass="card-stat-title" text="Despesas Totais" />
-                        <Label styleClass="card-stat-value" text="R$ 12.350,00" style="-fx-text-fill: #ef4444;" />
+                        <Label styleClass="card-stat-value" text="R$ 12.350,00" style="-fx-text-fill: #ffffff;" />
                     </children>
                 </VBox>
             </children>

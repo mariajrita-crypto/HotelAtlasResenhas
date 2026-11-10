@@ -6,7 +6,7 @@
 <VBox spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.HotelController">
     <padding><Insets bottom="20" left="20" right="20" top="20"/></padding>
     <children>
-        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Cadastro de Hóspedes e Clientes" />
+        <Label styleClass="page-title" text="Cadastro de Hóspedes e Clientes" />
         <HBox spacing="10.0">
             <TextField promptText="Buscar Hóspede por Nome/CPF..." HBox.hgrow="ALWAYS" />
             <Button styleClass="btn-primary" text="+ Novo Hóspede" />

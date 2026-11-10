@@ -6,7 +6,7 @@
     <top>
         <HBox alignment="CENTER_LEFT" spacing="16" styleClass="topbar">
             <VBox spacing="2">
-                <Label text="HOTEL ATLAS" styleClass="brand-small"/>
+                <Label text="ATLAS" styleClass="brand-small"/>
                 <Label text="HOSPEDAGEM E EXPERIÊNCIAS" styleClass="topbar-caption"/>
             </VBox>
             <Region HBox.hgrow="ALWAYS"/>

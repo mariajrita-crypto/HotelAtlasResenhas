@@ -149,7 +149,7 @@ public class ClienteController {
         StackPane slot = new StackPane();
         slot.getStyleClass().add("room-photo");
         slot.setMinSize(FOTO_W, FOTO_H); slot.setPrefSize(FOTO_W, FOTO_H); slot.setMaxSize(FOTO_W, FOTO_H);
-        Rectangle recorte = new Rectangle(FOTO_W, FOTO_H); recorte.setArcWidth(20); recorte.setArcHeight(20);
+        Rectangle recorte = new Rectangle(FOTO_W, FOTO_H); recorte.setArcWidth(0); recorte.setArcHeight(0);
         slot.setClip(recorte);
         Image img = carregarFotoQuarto(room.getNumber());
         if (img != null) {

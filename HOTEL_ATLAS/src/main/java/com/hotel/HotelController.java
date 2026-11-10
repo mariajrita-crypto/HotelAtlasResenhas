@@ -200,12 +200,12 @@ public class HotelController {
         }
         if (tabelaFinanceira != null) {
             Label info=new Label("Pagamentos registrados nas reservas aparecem no arquivo local pagamentos.json.");
-            info.setStyle("-fx-text-fill:#b9c3d0;");
+            info.setStyle("-fx-text-fill:#55688d;");
             ((VBox)tabelaFinanceira.getParent()).getChildren().add(1,info);
             tabelaFinanceira.getItems().clear();
         }
     }
-    private void estilizarAcoes(Button... bs){for(Button b:bs){b.setStyle("-fx-background-color:#a98755;-fx-text-fill:#151d27;-fx-font-weight:bold;-fx-background-radius:7;-fx-padding:9 14;");}}
+    private void estilizarAcoes(Button... bs){for(Button b:bs){b.setStyle("-fx-background-color:#0a3680;-fx-text-fill:white;-fx-font-weight:bold;-fx-background-radius:0;-fx-padding:10 18;");}}
     private void inserirBarra(TableView<?> tabela, Button... botoes){
         if(tabela.getParent() instanceof VBox box){HBox barra=new HBox(9,botoes);barra.setAlignment(javafx.geometry.Pos.CENTER_LEFT);box.getChildren().add(Math.max(0,box.getChildren().indexOf(tabela)),barra);}
     }

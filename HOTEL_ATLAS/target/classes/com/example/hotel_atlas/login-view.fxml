@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.LoginController">
-    <center>
-        <VBox alignment="CENTER" spacing="14" maxWidth="470" styleClass="login-card">
-            <padding><Insets top="30" right="42" bottom="30" left="42"/></padding>
-            <Label text="HOTEL ATLAS" styleClass="brand-title"/>
-            <Label text="Sua estadia começa aqui" styleClass="subtitle"/>
-            <Separator/>
-            <TabPane tabClosingPolicy="UNAVAILABLE" prefWidth="390" styleClass="auth-tabs">
+<StackPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.LoginController">
+    <HBox>
+        <!-- Capa: foto + camada azul, como no primeiro slide -->
+        <StackPane HBox.hgrow="ALWAYS" styleClass="login-hero" minWidth="0">
+            <ImageView fitWidth="1400" fitHeight="1000" preserveRatio="false" opacity="0.45" StackPane.alignment="CENTER">
+                <image><Image url="@imagens/quartos/quarto-401.jpg"/></image>
+            </ImageView>
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="★★★★★" styleClass="hero-stars"/>
+                <Label text="ATLAS" styleClass="brand-title"/>
+                <Label text="Carregamos o seu conforto nas costas." styleClass="hero-tagline"/>
+            </VBox>
+        </StackPane>
+        <!-- Formulário -->
+        <StackPane styleClass="login-panel" minWidth="520" prefWidth="560" maxWidth="560">
+            <VBox alignment="CENTER_LEFT" spacing="14" maxWidth="420" styleClass="login-card" style="-fx-background-color: transparent;">
+                <Label text="BEM-VINDO" styleClass="form-heading"/>
+                <Label text="Sua estadia começa aqui" styleClass="subtitle"/>
+                <TabPane tabClosingPolicy="UNAVAILABLE" maxWidth="420" styleClass="auth-tabs">
                 <tabs>
                     <Tab text="Entrar">
                         <content>
@@ -45,6 +57,7 @@
                     </Tab>
                 </tabs>
             </TabPane>
-        </VBox>
-    </center>
-</BorderPane>
+            </VBox>
+        </StackPane>
+    </HBox>
+</StackPane>
